@@ -165,8 +165,8 @@ vendor/lib/libWVStreamControlAPI_L3.so
 bin/hvdcp
 
 # FM radio
-bin/fmconfig
-bin/fm_qsoc_patches
+#bin/fmconfig
+#bin/fm_qsoc_patches
 
 # GPS
 app/com.qualcomm.location.apk
@@ -276,9 +276,9 @@ vendor/lib/hw/sensors.msm8226.so
 vendor/lib/libsensor1.so
 
 # Thermal
-bin/thermal-engine
-vendor/lib/libthermalclient.so
-vendor/lib/libthermalioctl.so
+#bin/thermal-engine
+#vendor/lib/libthermalclient.so
+#vendor/lib/libthermalioctl.so
 
 # Time services
 app/TimeService.apk

@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/samsung/ms013g
+LOCAL_PATH := device/samsung/matissewifi
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/ms013g/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/matissewifi/include
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8226
@@ -45,8 +45,8 @@ BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardwa
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x1e00000
-TARGET_KERNEL_SOURCE := kernel/samsung/ms013g
-TARGET_KERNEL_CONFIG := cyanogen_ms013g_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/matissewifi
+TARGET_KERNEL_CONFIG := msm8226-sec_matissewifi_defconfig
 
 WLAN_MODULES:
 	mkdir -p $(KERNEL_MODULES_OUT)/pronto
@@ -118,7 +118,7 @@ BOARD_CHARGING_CMDLINE_VALUE := "true"
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
 
 # Custom RIL class
-BOARD_RIL_CLASS := ../../../device/samsung/ms013g/ril/
+BOARD_RIL_CLASS := ../../../device/samsung/matissewifi/ril/
 
 # Disable initlogo, Samsungs framebuffer is weird
 TARGET_NO_INITLOGO := true
@@ -158,7 +158,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-	device/samsung/ms013g/sepolicy
+	device/samsung/matissewifi/sepolicy
 
 BOARD_SEPOLICY_UNION += \
 	adbd.te \
