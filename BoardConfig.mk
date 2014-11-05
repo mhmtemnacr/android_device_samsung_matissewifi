@@ -36,7 +36,7 @@ TARGET_BOARD_PLATFORM := msm8226
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm
+#TARGET_INIT_VENDOR_LIB := libinit_msm
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
@@ -46,7 +46,9 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x1e00000
 TARGET_KERNEL_SOURCE := kernel/samsung/matissewifi
-TARGET_KERNEL_CONFIG := msm8226-sec_matissewifi_defconfig
+#TARGET_KERNEL_CONFIG := msm8226-sec_matissewifi_defconfig
+TARGET_KERNEL_CONFIG := msm8226-sec_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
 
 WLAN_MODULES:
 	mkdir -p $(KERNEL_MODULES_OUT)/pronto
@@ -127,10 +129,10 @@ TARGET_NO_INITLOGO := true
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
+#BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 
 # Lights
-TARGET_PROVIDES_LIBLIGHT := true
+#TARGET_PROVIDES_LIBLIGHT := true
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
@@ -157,52 +159,52 @@ BOARD_VOLD_MAX_PARTITIONS := 30
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-	device/samsung/matissewifi/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#	device/samsung/matissewifi/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-	adbd.te \
-	app.te \
-	bluetooth_loader.te \
-	bridge.te \
-	camera.te \
-	device.te \
-	dhcp.te \
-	dnsmasq.te \
-	domain.te \
-	drmserver.te \
-	file_contexts \
-	file.te \
-	hostapd.te \
-	init_shell.te \
-	init.te \
-	libqc-opt.te \
-	mediaserver.te \
-	mpdecision.te \
-	netd.te \
-	netmgrd.te \
-	nfc.te \
-	property_contexts \
-	property.te \
-	qcom.te \
-	qmux.te \
-	radio.te \
-	rild.te \
-	rmt.te \
-	sdcard_internal.te \
-	sdcardd.te \
-	sensors.te \
-	shell.te \
-	surfaceflinger.te \
-	system.te \
-	tee.te \
-	te_macros \
-	thermald.te \
-	ueventd.te \
-	vold.te \
-	wpa_supplicant.te \
-	zygote.te
+#BOARD_SEPOLICY_UNION += \
+#	adbd.te \
+#	app.te \
+#	bluetooth_loader.te \
+#	bridge.te \
+#	camera.te \
+#	device.te \
+#	dhcp.te \
+#	dnsmasq.te \
+#	domain.te \
+#	drmserver.te \
+#	file_contexts \
+#	file.te \
+#	hostapd.te \
+#	init_shell.te \
+#	init.te \
+#	libqc-opt.te \
+#	mediaserver.te \
+#	mpdecision.te \
+#	netd.te \
+#	netmgrd.te \
+#	nfc.te \
+#	property_contexts \
+#	property.te \
+#	qcom.te \
+#	qmux.te \
+#	radio.te \
+#	rild.te \
+#	rmt.te \
+#	sdcard_internal.te \
+#	sdcardd.te \
+#	sensors.te \
+#	shell.te \
+#	surfaceflinger.te \
+##	system.te \
+#	tee.te \
+#	te_macros \
+#	thermald.te \
+#	ueventd.te \
+#	vold.te \
+#	wpa_supplicant.te \
+#	zygote.te
 
-ifneq ($(TARGET_BUILD_VARIANT),user)
-	BOARD_SEPOLICY_UNION += su.te
-endif
+#ifneq ($(TARGET_BUILD_VARIANT),user)
+#	BOARD_SEPOLICY_UNION += su.te
+#endif
