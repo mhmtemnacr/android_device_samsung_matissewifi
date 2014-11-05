@@ -4,11 +4,11 @@
     "target_path": "device/qcom/common"
   },
   {
-    "repository": "android_hardware_qcom_display-caf",
-    "target_path": "hardware/qcom/display-caf"
+    "repository": "android_hardware_qcom_display-caf-new",
+    "target_path": "hardware/qcom/display-caf-new"
   },
   {
-    "repository": "android_hardware_qcom_media-caf",
-    "target_path": "hardware/qcom/media-caf"
+    "repository": "android_hardware_qcom_media-caf-new",
+    "target_path": "hardware/qcom/media-caf-new"
   }
 ]
